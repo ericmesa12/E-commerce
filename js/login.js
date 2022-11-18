@@ -6,7 +6,7 @@ function login() {
   pass = document.getElementById("contraseña").value;
   if (user != "" && pass != "" && pass.checkValidity()) {
     localStorage.setItem("nombre", user);
-    location.href = "";
+    //location.href = "index.html";
   }
 }
 
