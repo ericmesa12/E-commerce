@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
           event.stopPropagation();
         } else {
           localStorage.setItem("nombre", user);
+          location.href = "index.html";
         }
         form.classList.add("was-validated");
       },
