@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eMercado - Todo lo que busques está aquí</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <li class="nav-item">
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                <a id="perfil"></a>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item"href="cart.html">Mi carrito</a></li>
+                <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
+                <li><a class="dropdown-item" href="login.html"id="logout">Cerrar sesión</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <br>
+    <div class="container p-5">
+      <h1>Perfil</h1>
+      <img id="imgPerfil" class="col-2" src="/img/img_perfil.png" alt="img.Perfil" style="border:1px solid rgba(0, 0, 0, 0.404);" >
+      <hr>
+      <form action="#" class="needs-validation" id="form" novalidate>
+        <div class="row justify-content-start">
+          <div class="col-md-6">
+            <label class="labels">Primer nombre:</label>
+            <input id="nombre1" type="text" class="form-control" placeholder="Primer nombre" required>
+            <div class="invalid-feedback">Debe ingresar un nombre</div>
+          </div>
+          <div class="col-md-6">
+            <label class="labels">Segundo nombre:</label>
+            <input id="nombre2" type="text" class="form-control" placeholder="Segundo nombre" required>
+          </div>
+        </div>
+        <br>
+        <div class="row justify-content-start">
+          <div class="col-md-6">
+            <label class="labels">Primer apellido:</label>
+            <input type="text" id="apellido1" class="form-control" placeholder="Primer apellido" required>
+            <div class="invalid-feedback">Debe ingresar un apellido</div>
+          </div>
+          <div class="col-md-6">
+            <label class="labels">Segundo apellido:</label>
+            <input type="text" id="apellido2" class="form-control" placeholder="Segundo apellido" required>
+          </div>
+        </div>
+        <br>
+        <div class="row justify-content-start">
+          <div class="col-md-6">
+            <label class="labels">Nombre de usuario:</label>
+            <input id="user" type="text" class="form-control" placeholder="Usuario" required>
+            <div class="invalid-feedback">Debe ingresar un usuario</div>
+          </div>
+          <div class="col-md-6">
+            <label class="labels">Telefono de contacto:</label>
+            <input id="phone" type="number" class="form-control" placeholder="Telefono de contacto" required><br>                
+          </div>
+          <div class="col-12">
+            <label for="imagen">Imagen de perfil:</label>
+            <input id="SelectIMG" type="file" accept="image/png, image/jpeg" class="form-control w-100 ">
+          </div> 
+        </div>     
+        <br><hr>
+        <div>
+          <button class="btn btn-primary" id="btn_enviar" type="submit">Guardar cambios</button>
+        </div>
+      </form>
+        
+
+      </div>
+    </div>
+  </main>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
+        2022</p>
+      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    </div>
+  </footer>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/my-profile.js"></script>
+</body>
+
+</html>

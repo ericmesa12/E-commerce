@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eMercado - Todo lo que busques está aquí</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <li class="nav-item">
+          </li>
+    
+          <li class="nav-item">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                <a id="perfil"></a>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item"href="cart.html">Mi carrito</a></li>
+                <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
+                <li><a class="dropdown-item" href="login.html"id="logout">Cerrar sesión</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+
+      <!-- Lista de compras -->
+      <div id="divTabla" class="container">
+        <h2>Carrito de compras</h2>
+        <table class="container">
+          <thead>
+            <tr style="border: 1px solid black;">
+            <th></th>
+              <th >Nombre</th>
+              <th >Costo</th>
+              <th >Cantidad</th>
+              <th >Subtotal</th>
+            </tr>
+            </thead>
+            <tbody id="tableCart">
+        </table><hr>
+      </div>
+      <!-- Lista de compras -->
+      
+     
+      <div class="row container">
+        <form id="formulario" class="row mt-4 needs-validation" novalidate>
+          <h3>Tipo de envío</h3> 
+          <input type="radio" name="opcion" id="Premium" class="form-check-input" required> Premium 2 a 5 días (15%)<br>
+          <input type="radio" name="opcion" id="Express" class="form-check-input" required> Express 5 a 8 días (7%)<br>
+          <input type="radio" name="opcion" id="Standard" class="form-check-input" required> Standard 12 a 15 días (5%)<br><br>
+          <h3>Dirección de envío</h3>
+
+          <div>
+          <label for="validationCustom01" class="form-label">Calle</label>
+          <input type="text" class="form-control" required >
+          <div class="invalid-feedback">
+            Ingresa una calle
+          </div>
+          </div>
+
+          <div>
+            <label for="validationCustom02" class="form-label">Número</label>
+            <input type="text" class="form-control" required >
+            <div class="invalid-feedback">
+              Ingresa un número
+            </div>
+            </div>
+
+            <div>
+              <label for="validationCustom03" class="form-label">Esquina</label>
+              <input type="text" class="form-control" required >
+              <div class="invalid-feedback">
+                ingresa una esquina
+              </div>
+              </div>
+
+          <div>
+            <h3>Costos</h3><br>
+            <span class="Costos"> Subtotal: <span id="subtotal"></span></span><br><br>
+            <span class="Costos"> Costo de envio: <span id="envio"></span></span><br><br>
+            <span class="Costos"> Total: <span id="TotalCost"></span></span>
+          <div>
+        
+          <div>
+            <hr><h3>Forma de pago</h3>
+            <a id="Select" href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Seleccionar</a>
+            <div id="feedMetodo" class="invalid-feedback">
+             Seleccione metodo de pago
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title"><b>Forma de pago</b></h5><hr>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                  <div class="form-check">
+                  <input id="Credito" type="radio" name="metodo" > Tarjeta de crédito<br><hr>
+                                                                  
+                  <label class="form-check-label">Número de tarjeta</label> 
+                  <input id="nTarjeta" class="form-control" type="number" required><br><br>
+                  
+                  <label class="form-check-label">Código de seg.</label> 
+                  <input id="Codigo" class="form-control" type="number" required><br><br>
+
+                  <label class="form-check-label">Vencimiento (MM/AA)</label> 
+                  <input id="Fecha" class="form-control" type="date" required><br><br>
+                                                    
+                  <input id="Transfer" type="radio" name="metodo" > Transferencia bancaria<br><hr>
+                  
+                  <label class="form-check-label">Número de cuenta</label> 
+                  <input id="nCuenta" class="form-control" type="number" required><br><br>                     
+                </div>
+              </div>             
+            </div>            
+          </div>
+        </div>
+        <button class="btn btn-primary" id="regBtn" type="submit" style="margin-top: 10px;">Finalizar compra</button>
+    </div>
+  </form><hr>
+  
+  
+  </main>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
+        2022</p>
+      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    </div>
+  </footer>
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+
+</html>
