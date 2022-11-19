@@ -5,9 +5,9 @@ function login() {
   user = document.getElementById("usuario").value;
   pass = document.getElementById("contraseña").value;
   if (user != "" && pass != "" && pass.checkValidity()) {
+    alert("asd");
     localStorage.setItem("nombre", user);
     location.href = "index.html";
-    alert("asd");
   }
 }
 
@@ -28,7 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
           event.preventDefault();
           event.stopPropagation();
         } else {
+          //alert("asd");
           localStorage.setItem("nombre", user);
+          location.href = "index.html";
         }
         form.classList.add("was-validated");
       },
