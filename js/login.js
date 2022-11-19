@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
           alert("asd");
           localStorage.setItem("nombre", user);
-          location.href = "index.html";
+          location.href = "/index.html";
         }
         form.classList.add("was-validated");
       },
