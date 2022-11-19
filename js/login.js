@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
           event.preventDefault();
           event.stopPropagation();
         } else {
-          //alert("asd");
+          alert("asd");
           localStorage.setItem("nombre", user);
           location.href = "index.html";
         }
