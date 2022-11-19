@@ -4,9 +4,10 @@ let pass = "";
 function login() {
   user = document.getElementById("usuario").value;
   pass = document.getElementById("contraseña").value;
-  if (user != "" && pass != "") {
+  if (user != "" && pass != "" && pass.checkValidity()) {
     localStorage.setItem("nombre", user);
     location.href = "index.html";
+    alert("asd");
   }
 }
 
